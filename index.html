@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main class="main">
+    <article class="main-card">
+      <section class="header">
+        <img class="photo" src="./images/image-jeremy.png" alt="jeremy a black man">
+        <div class="text-wrapper">
+          <span class="type">Report for</span>
+          <h1 class="person-name">Jeremy Robson</h1>
+        </div>
 
-  Report for
-  Jeremy Robson
+      </section>
+      <button type="button" class="indicator">Daily</button>
+      <button type="button" class="indicator">Weekly</button>
+      <button type="button" class="indicator">Monthly</button>
+    </article>
 
-  Daily
-  Weekly
-  Monthly
+    <ul class="card-container">
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+      <li class="card work">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Work</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+          <p class="daily">5hrs</p>
+          <p class="previous daily">Previous - 7hrs</p>
+          <p class="weekly">32hrs</p>
+          <p class="previous weekly">Previous - 36hrs</p>
+          <p class="monthly">103hrs</p>
+          <p class="previous monthly">Previous - 128hrs</p>
+        </section>
+      </li>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+      <li class="card play">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Play</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+          <p class="daily">1hr</p>
+          <p class="previous daily">Previous - 2hrs</p>
+          <p class="weekly">10hrs</p>
+          <p class="previous weekly">Previous - 8hrs</p>
+          <p class="monthly">23hrs</p>
+          <p class="previous monthly">Previous - 29hrs</p>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+        </section>
+      </li>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+      <li class="card study">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Study</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
 
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+          <p class="daily">0hrs</p>
+          <p class="previous daily">Previous - 1hr</p>
+          <p class="weekly">4hrs</p>
+          <p class="previous weekly">Previous - 7hrs</p>
+          <p class="monthly">13hrs</p>
+          <p class="previous monthly">Previous - 19hrs</p>
+
+        </section>
+      </li>
+
+      <li class="card exercise">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Exercise</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
+
+          <p class="daily">1hr</p>
+          <p class="previous daily">Previous - 1hr</p>
+          <p class="weekly">4hrs</p>
+          <p class="previous weekly">Previous - 5hrs</p>
+          <p class="monthly">11hrs</p>
+          <p class="previous monthly">Previous - 18hrs</p>
+
+        </section>
+      </li>
+
+      <li class="card social">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Social</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
+
+          <p class="daily">1hr</p>
+          <p class="previous daily">Previous - 3hrs</p>
+          <p class="weekly">5hrs</p>
+          <p class="previous weekly">Previous - 10hrs</p>
+          <p class="monthly">21hrs</p>
+          <p class="previous monthly">Previous - 23hrs</p>
+
+        </section>
+      </li>
+
+      <li class="card self-care">
+        <section class="content-section">
+          <div class="wrapper">
+            <h2 class="card-title">Self Care</h2>
+            <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
+          </div>
+
+          <p class="daily">0hrs</p>
+          <p class="previous daily">Previous - 1hr</p>
+          <p class="weekly">2hrs</p>
+          <p class="previous weekly">Previous - 2hrs</p>
+          <p class="monthly">7hrs</p>
+          <p class="previous monthly">Previous - 11hrs</p>
+
+        </section>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer class="footer">
+    <p>Challenge by <a class="credit" rel="noopener noreferrer" target="_blank"
+        href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</p>
+    <p>Coded by <a class="credit" rel="noopener noreferrer" target="_blank"
+        href="https://github.com/arshiya-sr">Arshiya_sr.</a></p>
   </footer>
 </body>
+
 </html>

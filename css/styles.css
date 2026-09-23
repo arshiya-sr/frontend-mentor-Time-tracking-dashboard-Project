@@ -1,0 +1,14 @@
+/* main */
+
+
+
+/* footer */
+
+.footer {
+    font-size: var(--fs-sm);
+    text-align: center;
+}
+
+.credit {
+    color: var(--Navy-900);
+}
