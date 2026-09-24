@@ -1,14 +1,180 @@
 /* main */
 
+.main {
+    flex: 1;
+    padding: var(--space-xl) var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    color: var(--Navy-200);
+    place-items: center;
+}
 
+.main-card {
+    width: clamp(250px, 90%, 450px);
+    background-color: var(--Navy-900);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    padding-bottom: var(--space-md);
+}
+
+.card-header {
+    background-color: var(--Purple-600);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg) 0;
+    gap: var(--space-md)
+}
+
+.photo {
+    width: 70px;
+    border: 2px solid var(--White);
+    border-radius: var(--radius-circle);
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.type {
+    color: var(--Blue-300);
+}
+
+.person-name {
+    font-size: var(--fs-lg2);
+    color: var(--White);
+    font-weight: var(--fw-lightest);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block-start: var(--space-md);
+}
+
+.indicator {
+    color: var(--Purple-500);
+    opacity: 0.8;
+}
+
+.button-container .daily {
+    color: var(--White);
+    opacity: 1;
+}
+
+.button-container .daily,
+.button-container .monthly,
+.button-container .weekly {
+    display: block;
+}
+
+/* cards */
+
+.weekly,
+.monthly {
+    display: none;
+}
+
+.card-container {
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    gap: var(--space-lg);
+    width: 100%;
+}
+
+.card {
+    list-style: none;
+    width: clamp(250px, 90%, 450px);
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    scale: 1.2;
+    right: 20px;
+    top: -2px;
+    z-index: 0;
+}
+
+.content-section {
+    margin-top: var(--space-xl);
+    background-color: var(--Navy-900);
+    border-radius: var(--radius-lg);
+    position: relative;
+    z-index: 10;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: var(--fs-lg);
+}
+
+.card-title,
+.content-wrapper p:first-child {
+    color: var(--White);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-wrapper p:first-child {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-lightest);
+}
+
+/* cards colors */
+
+.work {
+    background-color: var(--Orange-300);
+}
+
+.play {
+    background-color: var(--Blue-300)
+}
+
+.study {
+    background-color: var(--Pink-400);
+}
+
+.exercise {
+    background-color: var(--Green-400);
+}
+
+.social {
+    background-color: var(--Purple-700);
+}
+
+.self-care {
+    background-color: var(--Yellow-300);
+}
 
 /* footer */
 
 .footer {
+    color: var(--Navy-200);
     font-size: var(--fs-sm);
     text-align: center;
 }
 
 .credit {
-    color: var(--Navy-900);
+    color: var(--White);
 }

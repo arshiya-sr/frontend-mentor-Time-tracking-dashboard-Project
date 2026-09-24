@@ -22,9 +22,11 @@
     --Purple-500: hsl(235, 45%, 61%);
     --Navy-200: hsl(236, 100%, 87%);
 
+    --White: hsl(0, 100%, 100%);
+
     /* Typography */
 
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Rubik', sans-serif;
     --font-size-base: 1.125rem;
 
     /* sensible base for body text */
@@ -46,7 +48,9 @@
 
     /* Font weight */
 
+    --fw-lightest: 300;
     --fw-light: 400;
+    --fw-normal: 500;
     --fw-bold: 700;
 
     /* Spacing scale (rem-based for consistency)
@@ -80,7 +84,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url('fonts/Rubik-Light.ttf') format('truetype');
+    src: url('../fonts/Rubik-Light.ttf') format('truetype');
 }
 
 /* ===== Rubik - 400 (Regular) ===== */
@@ -90,7 +94,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('fonts/Rubik-Regular.ttf') format('truetype');
+    src: url('../fonts/Rubik-Regular.ttf') format('truetype');
 }
 
 /* ===== Rubik - 500 (Medium) ===== */
@@ -100,7 +104,7 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('fonts/Rubik-Medium.ttf') format('truetype');
+    src: url('../fonts/Rubik-Medium.ttf') format('truetype');
 }
 
 /* Overall styles */
@@ -112,5 +116,5 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--Blue-50);
+    background-color: var(--Navy-950);
 }

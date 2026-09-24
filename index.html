@@ -14,7 +14,7 @@
 <body>
   <main class="main">
     <article class="main-card">
-      <section class="header">
+      <section class="card-header">
         <img class="photo" src="./images/image-jeremy.png" alt="Portrait of Jeremy">
         <div class="text-wrapper">
           <span class="type">Report for</span>
@@ -22,110 +22,155 @@
         </div>
 
       </section>
-      <button type="button" class="indicator">Daily</button>
-      <button type="button" class="indicator">Weekly</button>
-      <button type="button" class="indicator">Monthly</button>
+      <div class="button-container">
+        <button type="button" class="indicator daily">Daily</button>
+        <button type="button" class="indicator weekly">Weekly</button>
+        <button type="button" class="indicator monthly">Monthly</button>
+      </div>
     </article>
 
     <ul class="card-container">
 
       <li class="card work">
+        <img class="icon" src="./images/icon-work.svg" alt=" " aria-hidden="true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Work</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">5hrs</p>
-          <p class="previous daily">Previous - 7hrs</p>
-          <p class="weekly">32hrs</p>
-          <p class="previous weekly">Previous - 36hrs</p>
-          <p class="monthly">103hrs</p>
-          <p class="previous monthly">Previous - 128hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">5hrs</p>
+            <p class="previous daily">Previous - 7hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">32hrs</p>
+            <p class="previous weekly">Previous - 36hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">103hrs</p>
+            <p class="previous monthly">Previous - 128hrs</p>
+          </div>
+
         </section>
       </li>
 
       <li class="card play">
+        <img class="icon" src="./images/icon-play.svg" alt=" " aria-hidden=" true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Play</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">1hr</p>
-          <p class="previous daily">Previous - 2hrs</p>
-          <p class="weekly">10hrs</p>
-          <p class="previous weekly">Previous - 8hrs</p>
-          <p class="monthly">23hrs</p>
-          <p class="previous monthly">Previous - 29hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">1hr</p>
+            <p class="previous daily">Previous - 2hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">10hrs</p>
+            <p class="previous weekly">Previous - 8hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">23hrs</p>
+            <p class="previous monthly">Previous - 29hrs</p>
+          </div>
 
         </section>
       </li>
 
       <li class="card study">
+        <img class="icon" src="./images/icon-study.svg" alt=" " aria-hidden=" true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Study</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">0hrs</p>
-          <p class="previous daily">Previous - 1hr</p>
-          <p class="weekly">4hrs</p>
-          <p class="previous weekly">Previous - 7hrs</p>
-          <p class="monthly">13hrs</p>
-          <p class="previous monthly">Previous - 19hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">0hrs</p>
+            <p class="previous daily">Previous - 1hr</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">4hrs</p>
+            <p class="previous weekly">Previous - 7hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">13hrs</p>
+            <p class="previous monthly">Previous - 19hrs</p>
+          </div>
 
         </section>
       </li>
 
       <li class="card exercise">
+        <img class="icon" src="./images/icon-exercise.svg" alt=" " aria-hidden=" true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Exercise</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">1hr</p>
-          <p class="previous daily">Previous - 1hr</p>
-          <p class="weekly">4hrs</p>
-          <p class="previous weekly">Previous - 5hrs</p>
-          <p class="monthly">11hrs</p>
-          <p class="previous monthly">Previous - 18hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">1hr</p>
+            <p class="previous daily">Previous - 1hr</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">4hrs</p>
+            <p class="previous weekly">Previous - 5hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">11hrs</p>
+            <p class="previous monthly">Previous - 18hrs</p>
+          </div>
 
         </section>
       </li>
 
       <li class="card social">
+        <img class="icon" src="./images/icon-social.svg" alt=" " aria-hidden=" true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Social</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">1hr</p>
-          <p class="previous daily">Previous - 3hrs</p>
-          <p class="weekly">5hrs</p>
-          <p class="previous weekly">Previous - 10hrs</p>
-          <p class="monthly">21hrs</p>
-          <p class="previous monthly">Previous - 23hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">1hr</p>
+            <p class="previous daily">Previous - 3hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">5hrs</p>
+            <p class="previous weekly">Previous - 10hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">21hrs</p>
+            <p class="previous monthly">Previous - 23hrs</p>
+          </div>
 
         </section>
       </li>
 
       <li class="card self-care">
+        <img class="icon" src="./images/icon-self-care.svg" alt=" " aria-hidden=" true">
         <section class="content-section">
-          <div class="wrapper">
+          <div class="top-wrapper">
             <h2 class="card-title">Self Care</h2>
             <img src="./images/icon-ellipsis.svg" alt="the icon to click for more informations" class="more-icon">
           </div>
 
-          <p class="daily">0hrs</p>
-          <p class="previous daily">Previous - 1hr</p>
-          <p class="weekly">2hrs</p>
-          <p class="previous weekly">Previous - 2hrs</p>
-          <p class="monthly">7hrs</p>
-          <p class="previous monthly">Previous - 11hrs</p>
+          <div class="content-wrapper">
+            <p class="daily">0hrs</p>
+            <p class="previous daily">Previous - 1hr</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="weekly">2hrs</p>
+            <p class="previous weekly">Previous - 2hrs</p>
+          </div>
+          <div class="content-wrapper">
+            <p class="monthly">7hrs</p>
+            <p class="previous monthly">Previous - 11hrs</p>
+          </div>
 
         </section>
       </li>
