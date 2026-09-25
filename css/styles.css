@@ -8,10 +8,11 @@
     gap: var(--space-lg);
     color: var(--Navy-200);
     place-items: center;
+    position: relative;
 }
 
 .main-card {
-    width: clamp(250px, 90%, 450px);
+    width: clamp(250px, 90%, 280px);
     background-color: var(--Navy-900);
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@
 }
 
 .photo {
-    width: 70px;
+    width: clamp(70px, 70px + 1vw, 100px);
     border: 2px solid var(--White);
     border-radius: var(--radius-circle);
 }
@@ -60,9 +61,21 @@
 .indicator {
     color: var(--Purple-500);
     opacity: 0.8;
+    transition: all 0.2s ease-in;
+    position: relative;
 }
 
-.button-container .daily {
+.button-container .daily:has(.radio-btn:checked) {
+    color: var(--White);
+    opacity: 1;
+}
+
+.button-container .weekly:has(.radio-btn:checked) {
+    color: var(--White);
+    opacity: 1;
+}
+
+.button-container .monthly:has(.radio-btn:checked) {
     color: var(--White);
     opacity: 1;
 }
@@ -73,27 +86,54 @@
     display: block;
 }
 
-/* cards */
+.radio-btn {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+/* time changings */
 
 .weekly,
 .monthly {
     display: none;
 }
 
+.main:has(.weekly-btn:checked) .card-container .weekly {
+    display: block;
+}
+
+.main:has(.weekly-btn:checked) .card-container .daily,
+.main:has(.weekly-btn:checked) .card-container .monthly {
+    display: none;
+}
+
+.main:has(.monthly-btn:checked) .card-container .monthly {
+    display: block;
+}
+
+.main:has(.monthly-btn:checked) .card-container .weekly,
+.main:has(.monthly-btn:checked) .card-container .daily {
+    display: none;
+}
+
+/* cards */
+
 .card-container {
     display: grid;
     grid-auto-flow: row;
     place-items: center;
     gap: var(--space-lg);
-    width: 100%;
+    width: clamp(450px, 100%, 1000px);
 }
 
 .card {
     list-style: none;
-    width: clamp(250px, 90%, 450px);
+    width: clamp(250px, 90%, 280px);
     position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-half) var(--radius-half);
+    z-index: 1;
+    clip-path: inset(0 0 -4px 0 round var(--radius-lg));
 }
 
 .icon {
@@ -109,7 +149,7 @@
     background-color: var(--Navy-900);
     border-radius: var(--radius-lg);
     position: relative;
-    z-index: 10;
+    z-index: 1;
     padding: var(--space-md);
     display: flex;
     flex-direction: column;
@@ -119,6 +159,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.more-icon {
+    cursor: pointer;
 }
 
 .card-title {
@@ -177,4 +221,47 @@
 
 .credit {
     color: var(--White);
+}
+
+/* Desktop Layout */
+/* 768px = 48rem based on 16px default HTML root font size*/
+@media screen and (min-width: 48rem) {
+    .main {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-card {
+        height: stretch;
+        max-height: 450px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline-start: var(--space-md);
+    }
+
+    .person-name {
+        max-width: 180px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline-start: var(--space-md);
+        gap: var(--space-md)
+    }
+
+    .card-container {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-inline-start: var(--space-sm);
+    }
 }
