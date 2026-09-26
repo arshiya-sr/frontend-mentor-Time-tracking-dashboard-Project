@@ -24,6 +24,12 @@
 
     --White: hsl(0, 100%, 100%);
 
+    --White-light: hsla(0, 0%, 90%, 0.7);
+
+    /* Shadows */
+
+    --Navy-shadow: hsl(245, 92%, 9%);
+
     /* Typography */
 
     --font-family: 'Rubik', sans-serif;

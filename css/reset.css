@@ -94,3 +94,11 @@ button {
     -webkit-appearance: none;
     appearance: none;
 }
+
+/* 12. Preffered Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: all 0.01ms linear !important;
+    }
+}

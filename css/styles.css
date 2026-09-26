@@ -12,12 +12,18 @@
 }
 
 .main-card {
-    width: clamp(250px, 90%, 280px);
+    width: clamp(270px, 90%, 310px);
     background-color: var(--Navy-900);
     display: flex;
     flex-direction: column;
     border-radius: var(--radius-lg);
     padding-bottom: var(--space-md);
+    transition: all 0.2s ease-in;
+}
+
+.main-card:hover {
+    transform: scale(1.005) translateY(-5px);
+    box-shadow: 0 0 15px var(--Navy-shadow);
 }
 
 .card-header {
@@ -46,7 +52,7 @@
 }
 
 .person-name {
-    font-size: var(--fs-lg2);
+    font-size: var(--fs-lg1);
     color: var(--White);
     font-weight: var(--fw-lightest);
 }
@@ -90,6 +96,7 @@
     position: absolute;
     inset: 0;
     opacity: 0;
+    cursor: pointer;
 }
 
 /* time changings */
@@ -124,16 +131,23 @@
     grid-auto-flow: row;
     place-items: center;
     gap: var(--space-lg);
-    width: clamp(450px, 100%, 1000px);
+    width: clamp(450px, 100%, 850px);
 }
 
 .card {
     list-style: none;
-    width: clamp(250px, 90%, 280px);
+    width: clamp(250px, 100%, 300px);
+    height: clamp(180px, 180px + 5vw, 230px);
     position: relative;
     border-radius: var(--radius-lg) var(--radius-lg) var(--radius-half) var(--radius-half);
     z-index: 1;
-    clip-path: inset(0 0 -4px 0 round var(--radius-lg));
+    clip-path: inset(0 -8px -8px -8px round var(--radius-lg));
+    transition: all 0.2s ease-in 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.005) translateY(-5px);
+    box-shadow: 0 0 15px var(--Navy-shadow);
 }
 
 .icon {
@@ -145,6 +159,7 @@
 }
 
 .content-section {
+    height: calc(100% - var(--space-xl));
     margin-top: var(--space-xl);
     background-color: var(--Navy-900);
     border-radius: var(--radius-lg);
@@ -153,6 +168,11 @@
     padding: var(--space-md);
     display: flex;
     flex-direction: column;
+    transition: all 0.2s ease-in
+}
+
+.card:hover .content-section {
+    transform: scale(1.01)
 }
 
 .top-wrapper {
@@ -167,6 +187,7 @@
 
 .card-title {
     font-size: var(--fs-lg);
+    font-weight: var(--fw-light);
 }
 
 .card-title,
@@ -217,23 +238,47 @@
     color: var(--Navy-200);
     font-size: var(--fs-sm);
     text-align: center;
+    padding-bottom: var(--space-md);
 }
 
 .credit {
     color: var(--White);
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.credit:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px var(--White-light);
+    transform: scale(1.05);
+    display: inline-block;
 }
 
 /* Desktop Layout */
-/* 768px = 48rem based on 16px default HTML root font size*/
-@media screen and (min-width: 48rem) {
+/* 992px = 62rem based on 16px default HTML root font size*/
+@media screen and (min-width: 62rem) {
     .main {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 280px minmax(0, 850px);
         justify-content: center;
+        align-content: center;
+        align-items: stretch;
+        gap: var(--space-md);
+        width: 100%;
     }
 
     .main-card {
-        height: stretch;
-        max-height: 450px;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-container {
+        width: 100%;
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: var(--space-lg);
+        align-self: stretch;
     }
 
     .card-header {
@@ -250,13 +295,8 @@
         flex-direction: column;
         align-items: flex-start;
         padding-inline-start: var(--space-md);
-        gap: var(--space-md)
-    }
-
-    .card-container {
-        grid-auto-flow: unset;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        margin-block-start: var(--space-lg);
+        gap: var(--space-md);
     }
 
     .content-wrapper {
