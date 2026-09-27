@@ -87,8 +87,8 @@
 }
 
 .button-container .daily,
-.button-container .monthly,
-.button-container .weekly {
+.button-container .weekly,
+.button-container .monthly {
     display: block;
 }
 
